@@ -58,7 +58,7 @@ mkdir $TCK_HOME/jaspictckwork
 
 cd $TCK_HOME/glassfish6/bin
 ./asadmin start-domain
-./asadmin stop-domain
+./asadmin stop-domain  --kill=true
 
 mkdir $TS_HOME/tmp/deploy_only_workdir
 cd $TS_HOME/bin
@@ -68,7 +68,7 @@ cd $TS_HOME/bin
 ant enable.jaspic
 
 cd $TCK_HOME/glassfish6/bin
-./asadmin stop-domain
+./asadmin stop-domain  --kill=true
 ./asadmin start-domain
 
 cd $TS_HOME/src/com/sun/ts/tests/jaspic

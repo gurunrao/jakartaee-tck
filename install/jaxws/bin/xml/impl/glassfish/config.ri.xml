@@ -154,7 +154,7 @@
       <exec executable="${exec.asadmin}" failifexecutionfails="false">
         <arg line="${exec.asadmin.part2}" />
         <arg line=" stop-domain"/>
-        <arg line=" ${glassfish.domain.name.ri}"/>
+        <arg line="  --kill=true"/>
       </exec>
     </target>
 

@@ -99,7 +99,7 @@ cd $TCK_HOME/$GF_TOPLEVEL_DIR/glassfish/bin
 ./asadmin create-jvm-options -Djavax.xml.accessExternalStylesheet=all
 ./asadmin create-jvm-options -Djavax.xml.accessExternalSchema=all
 ./asadmin create-jvm-options -Djavax.xml.accessExternalDTD=file,http
-./asadmin stop-domain
+./asadmin stop-domain  --kill=true
 ./asadmin start-domain
 
 cd $TS_HOME/bin

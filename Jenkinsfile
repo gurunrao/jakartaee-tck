@@ -27,7 +27,7 @@ def parallelCTSSuitesMap = cts_suites.collectEntries {
 }
 
 def generateCTSStage(job) {
-  if( job == "javamail" || job == "samples" || job == "servlet" || job == "ejb" ) {
+  if( job == "javamail" || job == "samples" || job == "servlet") {
     return {
       podTemplate(label: env.label) {
         node(label) {
@@ -46,7 +46,72 @@ def generateCTSStage(job) {
               sh """
                 env
                 unzip -q -o ${WORKSPACE}/jakartaeetck-bundles/*jakartaeetck*.zip -d ${CTS_HOME}
-                bash -x ${CTS_HOME}/jakartaeetck/docker/fix_classpaths.sh 2>&1 | tee ${CTS_HOME}/fix_classpaths.log
+                bash -x ${CTS_HOME}/jakartaeetck/docker/run_jakartaeetck.sh ${job} 2>&1 | tee ${CTS_HOME}/run_jakartaeetck.log
+              """
+              archiveArtifacts artifacts: "*-results.tar.gz,*-junitreports.tar.gz", allowEmptyArchive: true
+              junit testResults: 'results/junitreports/*.xml', allowEmptyResults: true
+            }
+          }
+        }
+      }
+    }
+  } else if( job == "ejb" ) {
+    return {
+      podTemplate(label: env.label) {
+        node(label) {
+          stage("${job}") {
+            container('james-mail') {
+             sh """
+               cd /root 
+               /root/startup.sh | tee /root/mailserver.log &
+               sleep 120
+               bash -x /root/create_users.sh 2>&1 | tee /root/create_users.log
+               echo "Mail server setup complete"
+             """
+            }
+            container('jakartaeetck-ci-2') {
+              unstash 'jakartaeetck-bundles'
+              sh """
+                env
+                unzip -q -o ${WORKSPACE}/jakartaeetck-bundles/*jakartaeetck*.zip -d ${CTS_HOME}
+                bash -x ${CTS_HOME}/jakartaeetck/docker/run_jakartaeetck.sh ${job} 2>&1 | tee ${CTS_HOME}/run_jakartaeetck.log
+              """
+              archiveArtifacts artifacts: "*-results.tar.gz,*-junitreports.tar.gz", allowEmptyArchive: true
+              junit testResults: 'results/junitreports/*.xml', allowEmptyResults: true
+            }
+          }
+        }
+      }
+    }
+  } else if( job =="jpa_appmanaged" ||  job =="jpa_appmanagedNoTx" ||  job =="jpa_pmservlet" ||  job =="jpa_puservlet" ||  job =="jpa_stateful3" ||  job =="jpa_stateless3" ) {
+    return {
+      podTemplate(label: env.label) {
+        node(label) {
+          stage("${job}") {
+            container('jakartaeetck-ci-2') {
+              unstash 'jakartaeetck-bundles'
+              sh """
+                env
+                unzip -q -o ${WORKSPACE}/jakartaeetck-bundles/*jakartaeetck*.zip -d ${CTS_HOME}
+                bash -x ${CTS_HOME}/jakartaeetck/docker/run_jakartaeetck.sh ${job} 2>&1 | tee ${CTS_HOME}/run_jakartaeetck.log
+              """
+              archiveArtifacts artifacts: "*-results.tar.gz,*-junitreports.tar.gz", allowEmptyArchive: true
+              junit testResults: 'results/junitreports/*.xml', allowEmptyResults: true
+            }
+          }
+        }
+      }
+    }
+  } else if( job == "ejb30/lite/singleton" ) {
+    return {
+      podTemplate(label: env.label) {
+        node(label) {
+          stage("${job}") {
+            container('jakartaeetck-ci-3') {
+              unstash 'jakartaeetck-bundles'
+              sh """
+                env
+                unzip -q -o ${WORKSPACE}/jakartaeetck-bundles/*jakartaeetck*.zip -d ${CTS_HOME}
                 bash -x ${CTS_HOME}/jakartaeetck/docker/run_jakartaeetck.sh ${job} 2>&1 | tee ${CTS_HOME}/run_jakartaeetck.log
               """
               archiveArtifacts artifacts: "*-results.tar.gz,*-junitreports.tar.gz", allowEmptyArchive: true
@@ -66,7 +131,6 @@ def generateCTSStage(job) {
               sh """
                 env
                 unzip -q -o ${WORKSPACE}/jakartaeetck-bundles/*jakartaeetck*.zip -d ${CTS_HOME}
-                bash -x ${CTS_HOME}/jakartaeetck/docker/fix_classpaths.sh 2>&1 | tee ${CTS_HOME}/fix_classpaths.log
                 bash -x ${CTS_HOME}/jakartaeetck/docker/run_jakartaeetck.sh ${job} 2>&1 | tee ${CTS_HOME}/run_cts.log
               """
               archiveArtifacts artifacts: "*-results.tar.gz,*-junitreports.tar.gz", allowEmptyArchive: true
@@ -131,8 +195,34 @@ spec:
         value: "-XshowSettings:vm -Xmx2048m -Dsun.zip.disableMemoryMapping=true -Dorg.jenkinsci.remoting.engine.JnlpProtocol3.disabled=true"
     resources:
       limits:
-        memory: "3Gi"
+        memory: "2Gi"
   - name: jakartaeetck-ci
+    image: jakartaee/cts-base:0.2
+    command:
+    - cat
+    tty: true
+    imagePullPolicy: Always
+    env:
+      - name: JAVA_TOOL_OPTIONS
+        value: -Xmx2G
+    resources:
+      limits:
+        memory: "2Gi"
+        cpu: "1"
+  - name: jakartaeetck-ci-2
+    image: jakartaee/cts-base:0.2
+    command:
+    - cat
+    tty: true
+    imagePullPolicy: Always
+    env:
+      - name: JAVA_TOOL_OPTIONS
+        value: -Xmx4G
+    resources:
+      limits:
+        memory: "4Gi"
+        cpu: "2"
+  - name: jakartaeetck-ci-3
     image: jakartaee/cts-base:0.2
     command:
     - cat
@@ -143,8 +233,8 @@ spec:
         value: -Xmx6G
     resources:
       limits:
-        memory: "10Gi"
-        cpu: "2.0"
+        memory: "6Gi"
+        cpu: "2"  
   - name: james-mail
     image: jakartaee/cts-mailserver:0.1
     command:
@@ -156,7 +246,7 @@ spec:
     imagePullPolicy: Always
     resources:
       limits:
-        memory: "2Gi"
+        memory: "1Gi"
         cpu: "0.5"
 """
     }
@@ -210,7 +300,7 @@ spec:
     stage('jakartaeetck-build') {
       when {
         expression {
-          return params.BUILD_TYPE == 'CTS';
+          return params.BUILD_TYPE == 'CTS' && params.TCK_BUNDLE_BASE_URL == '';
         }
       }
       steps {
@@ -218,12 +308,33 @@ spec:
           sh """
             env
             bash -x ${WORKSPACE}/docker/build_jakartaeetck.sh 2>&1 | tee ${WORKSPACE}/build_jakartaeetck.log
+            zip build_jakartaeetck_log.zip ${WORKSPACE}/build_jakartaeetck.log
           """
-          archiveArtifacts artifacts: "jakartaeetck-bundles/*.zip,*.version,*.log", allowEmptyArchive: true
+          archiveArtifacts artifacts: "jakartaeetck-bundles/*.zip,*.version,build_jakartaeetck_log.zip", allowEmptyArchive: true
           stash includes: 'jakartaeetck-bundles/*.zip', name: 'jakartaeetck-bundles'
         }
       }
     }
+
+    stage('jakartaeetck-build-with-prebuilt-tck') {
+      when {
+        expression {
+          return params.BUILD_TYPE == 'CTS' && params.TCK_BUNDLE_BASE_URL != '';
+        }
+      }
+      steps {
+        container('jakartaeetck-ci') {
+          sh """
+            env
+            bash -x ${WORKSPACE}/docker/build_jakartaeetck.sh 2>&1 | tee ${WORKSPACE}/build_jakartaeetck.log
+            zip build_jakartaeetck_log.zip ${WORKSPACE}/build_jakartaeetck.log
+          """
+          archiveArtifacts artifacts: "*.version,build_jakartaeetck_log.zip", allowEmptyArchive: true
+          stash includes: 'jakartaeetck-bundles/*.zip', name: 'jakartaeetck-bundles'
+        }
+      }
+    }
+ 
  
     stage('jakartaeetck-run') {
       when {

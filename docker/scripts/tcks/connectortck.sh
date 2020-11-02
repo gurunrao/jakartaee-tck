@@ -43,7 +43,7 @@ cd $TCK_HOME/glassfish6/bin
 ./asadmin start-domain
 ./asadmin create-jvm-options -Djava.security.manager
 ./asadmin restart-domain
-./asadmin stop-domain
+./asadmin stop-domain  --kill=true
 
 cd $TS_HOME/bin
 ant config.vi

@@ -68,11 +68,11 @@ chmod -R 777 $CTS_HOME/ri/glassfish6
 
 $CTS_HOME/ri/glassfish6/glassfish/bin/asadmin --user admin --passwordfile change-admin-password.txt change-admin-password
 $CTS_HOME/ri/glassfish6/glassfish/bin/asadmin --user admin --passwordfile admin-password.txt start-domain
-$CTS_HOME/ri/glassfish6/glassfish/bin/asadmin --user admin --passwordfile admin-password.txt stop-domain
+$CTS_HOME/ri/glassfish6/glassfish/bin/asadmin --user admin --passwordfile admin-password.txt stop-domain  --kill=true
 $CTS_HOME/ri/glassfish6/glassfish/bin/asadmin --user admin --passwordfile admin-password.txt start-domain
 $CTS_HOME/ri/glassfish6/glassfish/bin/asadmin --user admin --passwordfile admin-password.txt enable-secure-admin
 $CTS_HOME/ri/glassfish6/glassfish/bin/asadmin --user admin --passwordfile admin-password.txt version
-$CTS_HOME/ri/glassfish6/glassfish/bin/asadmin --user admin --passwordfile admin-password.txt stop-domain
+$CTS_HOME/ri/glassfish6/glassfish/bin/asadmin --user admin --passwordfile admin-password.txt stop-domain --kill=true
 $CTS_HOME/ri/glassfish6/glassfish/bin/asadmin --user admin --passwordfile admin-password.txt start-domain
 
 # Will these port work ?
@@ -114,8 +114,8 @@ $CTS_HOME/vi/glassfish6/glassfish/bin/asadmin --user admin --passwordfile admin-
 echo "$CTS_HOME/vi/glassfish6/glassfish/bin/asadmin --user admin --passwordfile admin-password.txt create-jvm-options -Djava.security.manager"
 $CTS_HOME/vi/glassfish6/glassfish/bin/asadmin --user admin --passwordfile admin-password.txt create-jvm-options -Djava.security.manager
 
-echo "$CTS_HOME/vi/glassfish6/glassfish/bin/asadmin --user admin --passwordfile admin-password.txt stop-domain"
-$CTS_HOME/vi/glassfish6/glassfish/bin/asadmin --user admin --passwordfile admin-password.txt stop-domain
+echo "$CTS_HOME/vi/glassfish6/glassfish/bin/asadmin --user admin --passwordfile admin-password.txt stop-domain  --kill=true"
+$CTS_HOME/vi/glassfish6/glassfish/bin/asadmin --user admin --passwordfile admin-password.txt stop-domain  --kill=true
 
 ./killJava.sh
 ##### installGlassFish.sh ends here #####
@@ -198,7 +198,7 @@ ant add.interop.certs
 ### restartRI.sh starts here #####
 cd $CTS_HOME
 export PORT=5858
-$CTS_HOME/ri/glassfish6/glassfish/bin/asadmin --user admin --passwordfile admin-password.txt -p $PORT stop-domain
+$CTS_HOME/ri/glassfish6/glassfish/bin/asadmin --user admin --passwordfile admin-password.txt -p $PORT stop-domain  --kill=true
 $CTS_HOME/ri/glassfish6/glassfish/bin/asadmin --user admin --passwordfile admin-password.txt -p $PORT start-domain
 ### restartRI.sh ends here #####
 

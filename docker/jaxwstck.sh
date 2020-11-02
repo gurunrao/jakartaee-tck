@@ -107,11 +107,11 @@ cd $TS_HOME/bin
 ant config.ri
 
 cd $TCK_HOME/vi/$GF_TOPLEVEL_DIR/glassfish/bin
-./asadmin stop-domain
+./asadmin stop-domain --kill=true
 ./asadmin start-domain
 
 cd $TCK_HOME/ri/$GF_TOPLEVEL_DIR/glassfish/bin
-./asadmin stop-domain
+./asadmin stop-domain --kill=true
 ./asadmin start-domain
 
 cd $TS_HOME/src/com/sun/ts/tests/jaxws

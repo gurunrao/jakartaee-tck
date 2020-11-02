@@ -79,7 +79,7 @@ cd $TCK_HOME/$GF_TOPLEVEL_DIR/bin
 ./asadmin start-domain
 ./asadmin create-jvm-options -Djava.security.manager
 ./asadmin restart-domain
-./asadmin stop-domain
+./asadmin stop-domain  --kill=true
 
 cd $TS_HOME/bin
 ant config.vi
