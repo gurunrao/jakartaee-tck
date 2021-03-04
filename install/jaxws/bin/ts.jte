@@ -79,12 +79,12 @@ endorsed.dirs.ri=${jaxws.home.ri}/modules/endorsed
 ###########################################################################
 # @jaxws.classes  should contain all Vendor specific jars/classes
 ###########################################################################
-jaxws.classes=${jaxws.lib}/webservices-api-osgi.jar${pathsep}${jaxws.lib}/jaxb-api-osgi.jar${pathsep}${jaxws.lib}/webservices-osgi.jar${pathsep}${jaxws.lib}/jaxb-osgi.jar${pathsep}${jaxws.lib}/gmbal.jar${pathsep}${jaxws.lib}/management-api.jar${pathsep}${jaxws.lib}/mimepull.jar${pathsep}${jaxws.lib}/ha-api.jar${pathsep}${jaxws.lib}/webservices-api.jar${pathsep}${jaxws.lib}/jakarta.xml.bind-api.jar${pathsep}${jaxws.lib}/jakarta.activation.jar
+jaxws.classes=${jaxws.lib}/../lib/resolver.jar${pathsep}${jaxws.lib}/jakarta.ejb-api.jar${pathsep}${jaxws.lib}/webservices-api-osgi.jar${pathsep}${jaxws.lib}/jaxb-api-osgi.jar${pathsep}${jaxws.lib}/webservices-osgi.jar${pathsep}${jaxws.lib}/jaxb-osgi.jar${pathsep}${jaxws.lib}/gmbal.jar${pathsep}${jaxws.lib}/management-api.jar${pathsep}${jaxws.lib}/mimepull.jar${pathsep}${jaxws.lib}/ha-api.jar${pathsep}${jaxws.lib}/webservices-api.jar${pathsep}${jaxws.lib}/jakarta.xml.bind-api.jar${pathsep}${jaxws.lib}/jakarta.activation.jar
 
 ###########################################################################
 # @jaxws.classes.ri  should contain all RI specific jars/classes
 ###########################################################################
-jaxws.classes.ri=${jaxws.lib.ri}/webservices-api-osgi.jar${pathsep}${jaxws.lib.ri}/jaxb-api-osgi.jar${pathsep}${jaxws.lib.ri}/webservices-osgi.jar${pathsep}${jaxws.lib.ri}/jaxb-osgi.jar${pathsep}${jaxws.lib.ri}/gmbal.jar${pathsep}${jaxws.lib.ri}/management-api.jar${pathsep}${jaxws.lib.ri}/mimepull.jar${pathsep}${jaxws.lib.ri}/ha-api.jar${pathsep}${jaxws.lib.ri}/webservices-api.jar${pathsep}${jaxws.lib.ri}/jakarta.xml.bind-api.jar${pathsep}${jaxws.lib.ri}/jakarta.activation.jar
+jaxws.classes.ri=${jaxws.lib.ri}/../lib/resolver.jar${pathsep}${jaxws.lib.ri}/jakarta.ejb-api.jar${pathsep}${jaxws.lib.ri}/webservices-api-osgi.jar${pathsep}${jaxws.lib.ri}/jaxb-api-osgi.jar${pathsep}${jaxws.lib.ri}/webservices-osgi.jar${pathsep}${jaxws.lib.ri}/jaxb-osgi.jar${pathsep}${jaxws.lib.ri}/gmbal.jar${pathsep}${jaxws.lib.ri}/management-api.jar${pathsep}${jaxws.lib.ri}/mimepull.jar${pathsep}${jaxws.lib.ri}/ha-api.jar${pathsep}${jaxws.lib.ri}/webservices-api.jar${pathsep}${jaxws.lib.ri}/jakarta.xml.bind-api.jar${pathsep}${jaxws.lib.ri}/jakarta.activation.jar
 
 ###########################################################################
 # @catalog.path  Path to catalog file for use with catalog tests
@@ -102,7 +102,7 @@ catalog.path=${src.dir}/com/sun/ts/tests/jaxws/common/xml/catalog
 ####################################################################
 ts.harness.classpath=${ts.home}/lib/javatest.jar${pathsep}${ts.home}/lib/tsharness.jar${pathsep}${ts.home}/lib/jaxwstck.jar${pathsep}${ant.home}/lib/ant.jar${pathsep}${ts.home}/lib/jaxb-api.jar${pathsep}${ts.home}/lib/jaxb-xjc.jar${pathsep}${ts.home}/lib/jaxb-libs.jar${pathsep}${ts.home}/lib/jaxb-impl.jar
 
-ts.classpath=${jaxws.classes}${pathsep}${ts.home}/lib/tsharness.jar${pathsep}${ts.home}/lib/jaxwstck.jar
+ts.classpath=${jaxws.classes}${pathsep}${ts.home}/lib/javatest.jar${pathsep}${ts.home}/lib/tsharness.jar${pathsep}${ts.home}/lib/jaxwstck.jar
 
 ts.run.classpath=${ts.home}/lib/tsharness.jar${pathsep}${ts.home}/lib/sigtest.jar${pathsep}${ts.home}/lib/jaxwstck.jar${pathsep}${ts.home}/classes${pathsep}${jaxws.classes}${pathsep}${catalog.path}
 

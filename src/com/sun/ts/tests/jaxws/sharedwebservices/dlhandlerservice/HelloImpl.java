@@ -43,7 +43,7 @@ import jakarta.xml.ws.handler.MessageContext;
 
 @WebService(portName = "HelloPort", targetNamespace = "http://dlhandlerservice.org/wsdl", serviceName = "DLHandlerService", wsdlLocation = "WEB-INF/wsdl/DLHandlerService.wsdl", endpointInterface = "com.sun.ts.tests.jaxws.sharedwebservices.dlhandlerservice.Hello")
 
-public class HelloImpl implements Hello {
+public abstract class HelloImpl implements Hello {
 
   @Resource
   WebServiceContext wscontext;
