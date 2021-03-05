@@ -25,7 +25,7 @@ import com.sun.ts.tests.samples.ejb.ee.simpleHello.Hello;
 import jakarta.jws.WebService;
 
 @WebService(portName = "HelloPort", serviceName = "HttpTestService", targetNamespace = "http://httptestservice.org/wsdl", wsdlLocation = "WEB-INF/wsdl/WSW2JDLHttpTestService.wsdl", endpointInterface = "com.sun.ts.tests.jaxws.ee.w2j.document.literal.httptest.Hello")
-public class HelloImpl implements Hello {
+public  abstract class HelloImpl implements Hello {
 
   public HelloResponse hello(HelloRequest req) {
     HelloResponse resp = null;

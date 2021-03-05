@@ -34,7 +34,7 @@ import jakarta.xml.ws.WebServiceException;
 
 @WebService(portName = "HelloPort", targetNamespace = "http://rlhandlerservice.org/wsdl", serviceName = "RLHandlerService", wsdlLocation = "WEB-INF/wsdl/RLHandlerService.wsdl", endpointInterface = "com.sun.ts.tests.jaxws.sharedwebservices.rlhandlerservice.Hello")
 
-public class HelloImpl implements Hello {
+public abstract class HelloImpl implements Hello {
 
   @Resource
   WebServiceContext wscontext;

@@ -26,7 +26,7 @@ import jakarta.jws.WebService;
 
 @WebService(portName = "HelloPort", serviceName = "W2JRLR1141TestService", targetNamespace = "http://w2jrlr1141testservice.org/wsdl", wsdlLocation = "WEB-INF/wsdl/W2JRLR1141TestService.wsdl", endpointInterface = "com.sun.ts.tests.jaxws.wsi.w2j.rpc.literal.R1141.Hello")
 
-public class HelloImpl implements Hello {
+public abstract class HelloImpl implements Hello {
 
   public HelloResponse hello(HelloRequest req) {
     System.out.println("Hello, " + req.getString() + "!");

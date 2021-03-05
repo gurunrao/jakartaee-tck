@@ -30,7 +30,7 @@ import jakarta.jws.WebService;
 
 @WebService(portName = "HelloPort", targetNamespace = "http://dlowhandlertestservice.org/wsdl", serviceName = "DLOWHandlerTestService", wsdlLocation = "WEB-INF/wsdl/WSDLOWHandlerTestService.wsdl", endpointInterface = "com.sun.ts.tests.jaxws.ee.w2j.document.literal.onewayhandlertest.server.Hello")
 
-public class HelloImpl implements Hello {
+public  abstract class HelloImpl implements Hello {
 
   public void doHandlerTest1(
       com.sun.ts.tests.jaxws.ee.w2j.document.literal.onewayhandlertest.server.MyAction action) {

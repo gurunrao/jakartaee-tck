@@ -35,7 +35,7 @@ import jakarta.xml.ws.http.HTTPBinding;
 @WebServiceProvider
 @BindingType(value = HTTPBinding.HTTP_BINDING)
 @ServiceMode(value = jakarta.xml.ws.Service.Mode.MESSAGE)
-public class HelloImpl implements Provider<Source> {
+public abstract class HelloImpl implements Provider<Source> {
   private static final jakarta.xml.bind.JAXBContext jaxbContext = createJAXBContext();
 
   private static int combo = -1;

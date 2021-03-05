@@ -39,7 +39,7 @@ import jakarta.xml.ws.WebServiceProvider;
 @WebServiceProvider(serviceName = "HelloService", portName = "HelloPort", targetNamespace = "http://helloservice.org/wsdl", wsdlLocation = "WEB-INF/wsdl/WSDLHelloProviderService.wsdl")
 @BindingType(value = jakarta.xml.ws.soap.SOAPBinding.SOAP11HTTP_BINDING)
 @ServiceMode(value = jakarta.xml.ws.Service.Mode.PAYLOAD)
-public class HelloImpl implements Provider<Source> {
+public  abstract class HelloImpl implements Provider<Source> {
   private static final jakarta.xml.bind.JAXBContext jaxbContext = createJAXBContext();
 
   public jakarta.xml.bind.JAXBContext getJAXBContext() {

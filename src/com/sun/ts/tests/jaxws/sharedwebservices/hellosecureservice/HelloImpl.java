@@ -35,7 +35,7 @@ import jakarta.xml.ws.wsaddressing.W3CEndpointReference;
 
 @WebService(portName = "HelloPort", serviceName = "HelloService", targetNamespace = "http://helloservice.org/wsdl", wsdlLocation = "WEB-INF/wsdl/WSHelloSecureService.wsdl", endpointInterface = "com.sun.ts.tests.jaxws.sharedwebservices.hellosecureservice.Hello")
 
-public class HelloImpl implements Hello {
+public abstract class HelloImpl implements Hello {
 
   @Resource
   protected WebServiceContext wsContext;

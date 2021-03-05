@@ -27,7 +27,7 @@ import jakarta.jws.WebService;
 
 @WebService(portName = "HelloPort", serviceName = "myService", targetNamespace = "http://customizationexternaltest.org/wsdl", wsdlLocation = "WEB-INF/wsdl/WSW2JDLCustomizationExternalTestService.wsdl", endpointInterface = "com.sun.ts.tests.jaxws.ee.w2j.document.literal.customization.external.Hello")
 
-public class HelloImpl implements Hello {
+public  abstract class HelloImpl implements Hello {
   public void myHello(jakarta.xml.ws.Holder<HelloElement> helloArgument)
       throws CustomizationExternalTestException {
     System.out.println("in CustomizationExternalTestService:HelloImpl:myHello");
