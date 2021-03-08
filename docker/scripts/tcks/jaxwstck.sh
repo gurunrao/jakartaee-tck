@@ -40,8 +40,6 @@ sed -i 's#^wsgen.ant.classname=.*#wsgen.ant.classname=com.sun.tools.ws.ant.WsGen
 sed -i 's#^wsimport.ant.classname=.*#wsimport.ant.classname=com.sun.tools.ws.ant.WsImport#g' ts.jte
 PROXY_HOST=`echo ${http_proxy} | cut -d: -f2 | sed -e 's/\/\///g'`
 PROXY_PORT=`echo ${http_proxy} | cut -d: -f3`
-sed -i "s#^wsimport.jvmargs=.*#wsimport.jvmargs=-Dhttp.proxyHost=$PROXY_HOST -Dhttp.proxyPort=$PROXY_PORT -Dhttp.nonProxyHosts=localhost#g" ts.jte
-sed -i "s#^ri.wsimport.jvmargs=.*#ri.wsimport.jvmargs=-Dhttp.proxyHost=$PROXY_HOST -Dhttp.proxyPort=$PROXY_PORT -Dhttp.nonProxyHosts=localhost#g" ts.jte
 sed -i "s#^glassfish.admin.port.ri=.*#glassfish.admin.port.ri=5858#g" ts.jte
 sed -i "s#^report.dir=.*#report.dir=$TCK_HOME/jaxwstckreport#g" ts.jte
 sed -i "s#^work.dir=.*#work.dir=$TCK_HOME/jaxwstckwork#g" ts.jte

@@ -39,7 +39,9 @@
     
     <target name="compile" 
             description="Compiles all java files under a src directory">
-        <ts.javac/>
+        <ts.javac>
+          <compilerarg value="-Xlint"/>
+        </ts.javac> 
     </target>
 
     <target name="-preclean"

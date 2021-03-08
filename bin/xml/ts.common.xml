@@ -32,7 +32,9 @@
     from calling to the top for clean and compile-->
 	<target name="compile" 
             description="Compiles all java files under a src directory">
-		<ts.javac/>
+		<ts.javac>
+          <compilerarg value="-Xlint"/>
+        </ts.javac> 
 	</target>
 
 	<target name="deploy.run.undeploy">
@@ -143,7 +145,7 @@
 			<classpath>
 				<pathelement path="${ts.classpath}${pathsep}${ant.home}/lib/ant.jar" />
 			</classpath>
-			<compilerarg line="${jdk.compiler.args}"/>
+			<compilerarg line="-Xlint ${jdk.compiler.args}"/>
 		</javac>
 	</presetdef>
 
