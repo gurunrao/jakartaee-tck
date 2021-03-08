@@ -37,14 +37,18 @@
 
 	<target name="generate_server">
         <antcall  target="do_wsdl2java_generate_server"/>
-        <ts.javac/>
+        <ts.javac>
+          <compilerarg value="-Xlint"/>
+       </ts.javac>
         <antcall target="webservice_import_package"/>
      </target>
 
     <target name="generate_client" depends="generate_server">
        <ts.clean.classes/>
        <antcall  target="do_wsdl2java_generate_client"/>
-       <ts.javac/>
+       <ts.javac>
+          <compilerarg value="-Xlint"/>
+       </ts.javac>
        <antcall target="client_import_package"/>
     </target>
 

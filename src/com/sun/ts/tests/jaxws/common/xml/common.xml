@@ -637,7 +637,9 @@
                  <echo message="compiling the newly filtered SEI and GSI sources"/>
                  <echo message="SEI=(${sei.java.files})"/>
                  <echo message="GSI=(${service.java.files})"/>
-                 <ts.javac includes="${pkg.dir}/${the.vehicle}/**/*.java"/>
+                 <ts.javac includes="${pkg.dir}/${the.vehicle}/**/*.java">
+                    <compilerarg value="-Xlint"/>
+                 </ts.javac>
                  <math result="cnt" operand1="${cnt}" operation="+" operand2="1" datatype="int" />
                  <math result="cnt2" operand1="${cnt2}" operation="+" operand2="1" datatype="int" />
                </sequential>

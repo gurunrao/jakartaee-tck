@@ -114,6 +114,7 @@
         <ts.javac includes="${lib.pkg.dir}/deliverable/tck/**
                             ${lib.pkg.dir}/deliverable/jaxws/**
                             ${lib.pkg.dir}/implementation/sun/common/SunRIURL.java">
+            <compilerarg value="-Xlint"/>
             <classpath>
                 <pathelement path="${ts.harness.classpath}" />
             </classpath>

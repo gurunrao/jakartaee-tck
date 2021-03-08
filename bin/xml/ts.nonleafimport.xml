@@ -34,7 +34,9 @@
     <!-- TARGETS -->
     <target name="build" description="Compiles classes and packages archives"
             unless="called.by.dosubdirs">
-            <ts.javac includes="*.java"/>
+            <ts.javac includes="*.java">
+                    <compilerarg value="-Xlint"/>
+            </ts.javac>
             <dosubdirs srcdir="${basedir}" todo="build"/>
     </target>
     
@@ -43,7 +45,9 @@
     </target>
     
     <target name="compile" unless="called.by.dosubdirs">
-        <ts.javac includes="*.java"/>
+        <ts.javac includes="*.java">
+            <compilerarg value="-Xlint"/>
+        </ts.javac>
         <dosubdirs srcdir="${basedir}" todo="compile"/>    
     </target>
   

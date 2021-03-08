@@ -38,7 +38,9 @@
   <property name="always.generate" value="true"/>
 
   <target name="generate_server">
-       <ts.javac includes="${pkg.dir}/*.java" excludes="${pkg.dir}/*Client*.java"/>
+       <ts.javac includes="${pkg.dir}/*.java" excludes="${pkg.dir}/*Client*.java">
+          <compilerarg value="-Xlint"/>
+       </ts.javac>
        <antcall target="server1"/>
        <antcall target="server2"/> 
        <antcall target="server3"/>
@@ -87,7 +89,9 @@
        <antcall target="client2"/> 
        <antcall target="client3"/>
        <antcall target="client4"/>
-       <ts.javac includes="${pkg.dir}/TestConstants.java, ${pkg.dir}/*Client*.java"/>
+       <ts.javac includes="${pkg.dir}/TestConstants.java, ${pkg.dir}/*Client*.java">
+          <compilerarg value="-Xlint"/>
+       </ts.javac>
        <antcall target="client_import_package"/>
    </target>
    

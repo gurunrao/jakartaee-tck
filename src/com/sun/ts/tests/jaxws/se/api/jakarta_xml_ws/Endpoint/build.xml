@@ -35,7 +35,9 @@
   <property name="common.classes" value="${jaxws.common.classes}"/>
 
   <target name="-precompile">
-      <ts.javac includes="${pkg.dir}/HelloImpl.java"/>
+      <ts.javac includes="${pkg.dir}/HelloImpl.java">
+            <compilerarg value="-Xlint"/>
+      </ts.javac>
       <antcall  target="do_java2wsdl_generate_server"/>
   </target>
 

@@ -38,7 +38,9 @@
        <antcall  target="do_wsdl2java_generate_server">
            <param name="customization.binding.files" value="customfile-server.xml"/>
        </antcall>
-       <ts.javac/>
+       <ts.javac>
+          <compilerarg value="-Xlint"/>
+       </ts.javac>
        <antcall target="webservice_import_package"/>
     </target>
 
@@ -47,7 +49,9 @@
       <antcall  target="do_wsdl2java_generate_client">
         <param name="customization.binding.files" value="customfile-client.xml"/>
       </antcall>
-      <ts.javac/>
+      <ts.javac>
+          <compilerarg value="-Xlint"/>
+       </ts.javac>
       <antcall target="client_import_package"/>
     </target>
 

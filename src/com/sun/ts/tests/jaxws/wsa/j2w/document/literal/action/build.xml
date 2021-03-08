@@ -37,7 +37,9 @@
 
 
   <target name="generate_server" >
-    <ts.javac includes="${pkg.dir}/*.java" excludes="${pkg.dir}/*Client*.java"/>
+    <ts.javac includes="${pkg.dir}/*.java" excludes="${pkg.dir}/*Client*.java">
+          <compilerarg value="-Xlint"/>
+    </ts.javac>
     <antcall  target="do_java2wsdl_generate_server"/>
     <antcall  target="j2w_webservice_import_package"/>
   </target>
@@ -47,7 +49,9 @@
        <antcall  target="do_wsdl2java_generate_client_with_package_option">
          <param name="customization.binding.files" value="customfile.xml"/>
        </antcall>
-       <ts.javac includes="${pkg.dir}/*Client*.java, ${pkg.dir}/*Constants.java"/>
+       <ts.javac includes="${pkg.dir}/*Client*.java, ${pkg.dir}/*Constants.java">
+          <compilerarg value="-Xlint"/>
+       </ts.javac>
        <antcall target="client_import_package"/>
     </target>
 
