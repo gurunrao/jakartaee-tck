@@ -50,20 +50,36 @@ fi
 wget --progress=bar:force --no-cache $GF_BUNDLE_URL -O latest-glassfish.zip
 unzip -q ${TCK_HOME}/latest-glassfish.zip -d ${TCK_HOME}
 
+
 TS_HOME=$TCK_HOME/$TCK_NAME
 echo "TS_HOME $TS_HOME"
 
-chmod -R 777 $TS_HOME
+
+export ANT_OPTS="-Djava.endorsed.dirs=$TCK_HOME/$GF_TOPLEVEL_DIR/glassfish/modules/endorsed -Djavax.xml.accessExternalStylesheet=all -Djavax.xml.accessExternalSchema=all -Djavax.xml.accessExternalDTD=file,http,https"
+
+
 cd $TS_HOME/bin
-mkdir $TCK_HOME/ri
+
+sed -i "s#^webcontainer\.home=.*#webcontainer.home=$TCK_HOME/$GF_TOPLEVEL_DIR/glassfish#g" ts.jte
+sed -i "s#webcontainer\.home\.ri=.*#webcontainer.home.ri=$TCK_HOME/ri/$GF_TOPLEVEL_DIR/glassfish#g" ts.jte
+sed -i 's#webServerHost\.2=.*#webServerHost.2=localhost#g' ts.jte
+sed -i 's#webServerPort\.2=.*#webServerPort.2=9080#g' ts.jte
+sed -i 's#wsgen.ant.classname=.*#wsgen.ant.classname=com.sun.tools.ws.ant.WsGen#g' ts.jte
+sed -i 's#wsimport.ant.classname=.*#wsimport.ant.classname=com.sun.tools.ws.ant.WsImport#g' ts.jte
+sed -i "s#glassfish.admin.port.ri=.*#glassfish.admin.port.ri=5858#g" ts.jte
+sed -i "s#^report.dir=.*#report.dir=$TCK_HOME/${TCK_NAME}report/${TCK_NAME}#g" ts.jte
+sed -i "s#^work.dir=.*#work.dir=$TCK_HOME/${TCK_NAME}work/${TCK_NAME}#g" ts.jte
+
+cd $TS_HOME/src/com/sun/ts/tests/jaxws
+ant -Dkeywords=all -Dbuild.vi=true build
+
+cd $TS_HOME/bin
 
 if [[ "$JDK" == "JDK11" || "$JDK" == "jdk11" ]];then
   export JAVA_HOME=${JDK11_HOME}
   export PATH=$JAVA_HOME/bin:$PATH
   cp ts.jte.jdk11 ts.jte
   export ANT_OPTS="-Djavax.xml.accessExternalStylesheet=all -Djavax.xml.accessExternalSchema=all -Djavax.xml.accessExternalDTD=file,http,https"
-else
-  export ANT_OPTS="-Djava.endorsed.dirs=$TCK_HOME/$GF_TOPLEVEL_DIR/glassfish/modules/endorsed -Djavax.xml.accessExternalStylesheet=all -Djavax.xml.accessExternalSchema=all -Djavax.xml.accessExternalDTD=file,http,https"
 fi
 
 which java
@@ -83,13 +99,18 @@ mkdir -p $TCK_HOME/${TCK_NAME}report/${TCK_NAME}
 mkdir -p $TCK_HOME/${TCK_NAME}work/${TCK_NAME}
 
 
-cd $TCK_HOME/vi/$GF_TOPLEVEL_DIR/glassfish/bin
+cd $TCK_HOME/$GF_TOPLEVEL_DIR/glassfish/bin
 ./asadmin start-domain
 cd $TS_HOME/bin
 ant config.vi
 
 RI_DOMAIN_CONFIG_FILE=$TCK_HOME/ri/$GF_TOPLEVEL_DIR/glassfish/domains/domain1/config/domain.xml
 rm -rf $TCK_HOME/ri/*
+
+chmod -R 777 $TS_HOME
+cd $TS_HOME/bin
+mkdir $TCK_HOME/ri
+
 
 # TODO : Web Profile 
 # cp $TCK_HOME/latest-glassfish-$PROFILE.zip $BASEDIR/ri/latest-glassfish.zip
@@ -106,7 +127,7 @@ cd $TCK_HOME/ri/$GF_TOPLEVEL_DIR/glassfish/bin
 cd $TS_HOME/bin
 ant config.ri
 
-cd $TCK_HOME/vi/$GF_TOPLEVEL_DIR/glassfish/bin
+cd $TCK_HOME/$GF_TOPLEVEL_DIR/glassfish/bin
 ./asadmin stop-domain
 ./asadmin start-domain
 
@@ -114,8 +135,6 @@ cd $TCK_HOME/ri/$GF_TOPLEVEL_DIR/glassfish/bin
 ./asadmin stop-domain
 ./asadmin start-domain
 
-cd $TS_HOME/src/com/sun/ts/tests/jaxws
-ant -Dkeywords=all -Dbuild.vi=true build
 cd $TS_HOME/bin
 ant -Dkeywords=all deploy.all
 ant -Dkeywords=all run.all 

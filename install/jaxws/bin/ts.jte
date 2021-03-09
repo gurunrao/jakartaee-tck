@@ -79,12 +79,14 @@ endorsed.dirs.ri=${jaxws.home.ri}/modules/endorsed
 ###########################################################################
 # @jaxws.classes  should contain all Vendor specific jars/classes
 ###########################################################################
-jaxws.classes=${jaxws.lib}/webservices-api-osgi.jar${pathsep}${jaxws.lib}/jaxb-api-osgi.jar${pathsep}${jaxws.lib}/webservices-osgi.jar${pathsep}${jaxws.lib}/jaxb-osgi.jar${pathsep}${jaxws.lib}/gmbal.jar${pathsep}${jaxws.lib}/management-api.jar${pathsep}${jaxws.lib}/mimepull.jar${pathsep}${jaxws.lib}/ha-api.jar${pathsep}${jaxws.lib}/webservices-api.jar${pathsep}${jaxws.lib}/jakarta.xml.bind-api.jar${pathsep}${jaxws.lib}/jakarta.activation.jar
+jaxws.classes=${jaxws.lib}/../lib/resolver.jar${pathsep}${jaxws.lib}/jakarta.ejb-api.jar${pathsep}${jaxws.lib}/webservices-api-osgi.jar${pathsep}${jaxws.lib}/jaxb-api-osgi.jar${pathsep}${jaxws.lib}/webservices-osgi.jar${pathsep}${jaxws.lib}/jaxb-osgi.jar${pathsep}${jaxws.lib}/gmbal.jar${pathsep}${jaxws.lib}/management-api.jar${pathsep}${jaxws.lib}/mimepull.jar${pathsep}${jaxws.lib}/ha-api.jar${pathsep}${jaxws.lib}/webservices-api.jar${pathsep}${jaxws.lib}/jakarta.xml.bind-api.jar${pathsep}${jaxws.lib}/jakarta.activation.jar${pathsep}${jaxws.lib}/jakarta.servlet-api.jar${pathsep}${jaxws.lib}/FastInfoset.jar${pathsep}${jaxws.lib}/gmbal-api-only.jar${pathsep}${jaxws.lib}/ha-api.jar${pathsep}${jaxws.lib}/jakarta.annotation.jar${pathsep}${jaxws.lib}/jakarta.xml.soap-api.jar${pathsep}${endorsed.dirs}/jaxb-api.jar${pathsep}${jaxws.lib}/jaxb-impl.jar${pathsep}${jaxws.lib}/jaxb-xjc.jar${pathsep}${jaxws.lib}/jaxb-jxc.jar${pathsep}${jaxws.lib}/jaxb-core.jar${pathsep}${endorsed.dirs}/jaxws-api.jar${pathsep}${jaxws.lib}/jaxws-rt.jar${pathsep}${jaxws.lib}/jaxws-tools.jar${pathsep}${jaxws.lib}/jsr181-api.jar${pathsep}${jaxws.lib}/mail.jar${pathsep}${jaxws.lib}/management-api.jar${pathsep}${jaxws.lib}/mimepull.jar${pathsep}${jaxws.lib}/policy.jar${pathsep}${jaxws.lib}/resolver.jar${pathsep}${jaxws.lib}/saaj-impl.jar${pathsep}${jaxws.lib}/stax-ex.jar${pathsep}${jaxws.lib}/stax2-api.jar${pathsep}${jaxws.lib}/streambuffer.jar${pathsep}${jaxws.lib}/woodstox-core-asl.jar
+
 
 ###########################################################################
 # @jaxws.classes.ri  should contain all RI specific jars/classes
 ###########################################################################
-jaxws.classes.ri=${jaxws.lib.ri}/webservices-api-osgi.jar${pathsep}${jaxws.lib.ri}/jaxb-api-osgi.jar${pathsep}${jaxws.lib.ri}/webservices-osgi.jar${pathsep}${jaxws.lib.ri}/jaxb-osgi.jar${pathsep}${jaxws.lib.ri}/gmbal.jar${pathsep}${jaxws.lib.ri}/management-api.jar${pathsep}${jaxws.lib.ri}/mimepull.jar${pathsep}${jaxws.lib.ri}/ha-api.jar${pathsep}${jaxws.lib.ri}/webservices-api.jar${pathsep}${jaxws.lib.ri}/jakarta.xml.bind-api.jar${pathsep}${jaxws.lib.ri}/jakarta.activation.jar
+jaxws.classes.ri=${jaxws.lib.ri}/../lib/resolver.jar${pathsep}${jaxws.lib.ri}/jakarta.ejb-api.jar${pathsep}${jaxws.lib.ri}/webservices-api-osgi.jar${pathsep}${jaxws.lib.ri}/jaxb-api-osgi.jar${pathsep}${jaxws.lib.ri}/webservices-osgi.jar${pathsep}${jaxws.lib.ri}/jaxb-osgi.jar${pathsep}${jaxws.lib.ri}/gmbal.jar${pathsep}${jaxws.lib.ri}/management-api.jar${pathsep}${jaxws.lib.ri}/mimepull.jar${pathsep}${jaxws.lib.ri}/ha-api.jar${pathsep}${jaxws.lib.ri}/webservices-api.jar${pathsep}${jaxws.lib.ri}/jakarta.xml.bind-api.jar${pathsep}${jaxws.lib.ri}/jakarta.activation.jar${pathsep}${jaxws.lib.ri}/FastInfoset.jar${pathsep}${jaxws.lib.ri}/gmbal-api-only.jar${pathsep}${jaxws.lib.ri}/ha-api.jar${pathsep}${jaxws.lib.ri}/jakarta.annotation.jar${pathsep}${jaxws.lib.ri}/jakarta.xml.soap-api.jar${pathsep}${endorsed.dirs.ri}/jaxb-api.jar${pathsep}${jaxws.lib.ri}/jaxb-impl.jar${pathsep}${jaxws.lib.ri}/jaxb-xjc.jar${pathsep}${jaxws.lib.ri}/jaxb-jxc.jar${pathsep}${jaxws.lib.ri}/jaxb-core.jar${pathsep}${endorsed.dirs.ri}/jaxws-api.jar${pathsep}${jaxws.lib.ri}/jaxws-rt.jar${pathsep}${jaxws.lib.ri}/jaxws-tools.jar${pathsep}${jaxws.lib.ri}/jsr181-api.jar${pathsep}${jaxws.lib.ri}/mail.jar${pathsep}${jaxws.lib.ri}/management-api.jar${pathsep}${jaxws.lib.ri}/mimepull.jar${pathsep}${jaxws.lib.ri}/policy.jar${pathsep}${jaxws.lib.ri}/resolver.jar${pathsep}${jaxws.lib.ri}/saaj-impl.jar${pathsep}${jaxws.lib.ri}/stax-ex.jar${pathsep}${jaxws.lib.ri}/stax2-api.jar${pathsep}${jaxws.lib.ri}/streambuffer.jar${pathsep}${jaxws.lib.ri}/woodstox-core-asl.jar
+
 
 ###########################################################################
 # @catalog.path  Path to catalog file for use with catalog tests
@@ -100,13 +102,13 @@ catalog.path=${src.dir}/com/sun/ts/tests/jaxws/common/xml/catalog
 # @ts.run.classpath.ri  --  Classpath required by Java EE RI
 #                           appclient container.
 ####################################################################
-ts.harness.classpath=${ts.home}/lib/javatest.jar${pathsep}${ts.home}/lib/tsharness.jar${pathsep}${ts.home}/lib/jaxwstck.jar${pathsep}${ant.home}/lib/ant.jar${pathsep}${ts.home}/lib/jaxb-api.jar${pathsep}${ts.home}/lib/jaxb-xjc.jar${pathsep}${ts.home}/lib/jaxb-libs.jar${pathsep}${ts.home}/lib/jaxb-impl.jar
+ts.harness.classpath=${ts.home}/lib/javatest.jar${pathsep}${ts.home}/lib/tsharness.jar${pathsep}${ts.home}/lib/jaxwstck.jar${pathsep}${ant.home}/lib/ant.jar${pathsep}${ts.home}/lib/jaxb-api.jar${pathsep}${ts.home}/lib/jaxb-xjc.jar${pathsep}${ts.home}/lib/jaxb-libs.jar${pathsep}${ts.home}/lib/jaxb-impl.jar${pathsep}${ts.home}/classes
 
-ts.classpath=${jaxws.classes}${pathsep}${ts.home}/lib/tsharness.jar${pathsep}${ts.home}/lib/jaxwstck.jar
+ts.classpath=${jaxws.classes}${pathsep}${ts.home}/lib/tsharness.jar${pathsep}${ts.home}/lib/jaxwstck.jar${pathsep}${ts.home}/lib/javatest.jar${pathsep}${ts.home}/classes
 
-ts.run.classpath=${ts.home}/lib/tsharness.jar${pathsep}${ts.home}/lib/sigtest.jar${pathsep}${ts.home}/lib/jaxwstck.jar${pathsep}${ts.home}/classes${pathsep}${jaxws.classes}${pathsep}${catalog.path}
+ts.run.classpath=${ts.home}/lib/tsharness.jar${pathsep}${ts.home}/lib/sigtest.jar${pathsep}${ts.home}/lib/jaxwstck.jar${pathsep}${ts.home}/classes${pathsep}${jaxws.classes}${pathsep}${catalog.path}${pathsep}${ts.home}/classes
 
-ts.run.classpath.ri=${ts.home}/lib/tsharness.jar${pathsep}${ts.home}/lib/sigtest.jar${pathsep}${ts.home}/lib/jaxwstck.jar${pathsep}${ts.home}/classes${pathsep}${jaxws.classes.ri}${pathsep}${catalog.path}
+ts.run.classpath.ri=${ts.home}/lib/tsharness.jar${pathsep}${ts.home}/lib/sigtest.jar${pathsep}${ts.home}/lib/jaxwstck.jar${pathsep}${ts.home}/classes${pathsep}${jaxws.classes.ri}${pathsep}${catalog.path}${pathsep}${ts.home}/classes
 
 ###########################################################################
 # @tools.jar  should be set to the location of the tools.jar from the installed
@@ -501,6 +503,15 @@ tslib.name=jaxwstck
 ###########################################################################
 client.delay=1
 
+###############################################################
+# @extension.dir - The extension directory of RI. 
+# The CTS config.vi target will copy the CTS library 
+# jars to this location, used only for RI.
+###############################################################
+extension.dir=${webcontainer.home}/domains/domain1/lib/ext
+extension.dir.ri=${webcontainer.home.ri}/domains/domain1/lib/ext
+
+
 #################################################################
 # To Configure config.vi with security manager
 #################################################################
@@ -543,13 +554,3 @@ s1as.domain.name=${glassfish.domain.name}
 s1as.domain=${s1as.domain.dir}/${s1as.domain.name}
 s1as.admin.host=${glassfish.admin.host}
 s1as.admin.port=${glassfish.admin.port}
-
-###############################################################
-# @extension.dir - The extension directory of RI. 
-# The CTS config.vi target will copy the CTS library 
-# jars to this location, used only for RI.
-###############################################################
-extension.dir=${webcontainer.home}/domains/domain1/lib/ext
-extension.dir.ri=${webcontainer.home.ri}/domains/domain1/lib/ext
-
-

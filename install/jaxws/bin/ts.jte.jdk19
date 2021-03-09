@@ -1,5 +1,5 @@
 #
-# Copyright (c) 2009, 2021 Oracle and/or its affiliates. All rights reserved.
+# Copyright (c) 2009, 2020 Oracle and/or its affiliates. All rights reserved.
 #
 # This program and the accompanying materials are made available under the
 # terms of the Eclipse Public License v. 2.0, which is available at
@@ -85,7 +85,7 @@ jaxws.classes=${jaxws.lib}/javax.servlet-api.jar${pathsep}${jaxws.lib}/FastInfos
 ###########################################################################
 # @jaxws.classes.ri  should contain all RI specific jars/classes
 ###########################################################################
-jaxws.classes.ri=${jaxws.lib.ri}/FastInfoset.jar${pathsep}${jaxws.lib.ri}/gmbal-api-only.jar${pathsep}${jaxws.lib.ri}/ha-api.jar${pathsep}${jaxws.lib.ri}/jakarta.annotation.jar${pathsep}${jaxws.lib.ri}/javax.xml.soap-api.jar${pathsep}${endorsed.dirs.ri}/jaxb-api.jar${pathsep}${jaxws.lib.ri}/jaxb-impl.jar${pathsep}${jaxws.lib.ri}/jaxb-xjc.jar${pathsep}${jaxws.lib.ri}/jaxb-jxc.jar${pathsep}${jaxws.lib.ri}/jaxb-core.jar${pathsep}${endorsed.dirs.ri}/jaxws-api.jar${pathsep}${jaxws.lib.ri}/jaxws-rt.jar${pathsep}${jaxws.lib.ri}/jaxws-tools.jar${pathsep}${jaxws.lib.ri}/jsr181-api.jar${pathsep}${jaxws.lib.ri}/mail.jar${pathsep}${jaxws.lib.ri}/management-api.jar${pathsep}${jaxws.lib.ri}/mimepull.jar${pathsep}${jaxws.lib.ri}/policy.jar${pathsep}${jaxws.lib.ri}/resolver.jar${pathsep}${jaxws.lib.ri}/saaj-impl.jar${pathsep}${jaxws.lib.ri}/stax-ex.jar${pathsep}${jaxws.lib.ri}/stax2-api.jar${pathsep}${jaxws.lib.ri}/streambuffer.jar${pathsep}${jaxws.lib.ri}/woodstox-core-asl.jar
+jaxws.classes.ri=${jaxws.lib.ri}/FastInfoset.jar${pathsep}${jaxws.lib.ri}/gmbal-api-only.jar${pathsep}${jaxws.lib.ri}/ha-api.jar${pathsep}${jaxws.lib.ri}/jakarta.annotation.jar${pathsep}${jaxws.lib.ri}/javax.xml.soap-api.jar${pathsep}${endorsed.dirs.ri}/jaxb-api.jar${pathsep}${jaxws.lib.ri}/jaxb-impl.jar${pathsep}${jaxws.lib.ri}/jaxb-xjc.jar${pathsep}${jaxws.lib.ri}/jaxb-jxc.jar${pathsep}${jaxws.lib.ri}/jaxb-core.jar${pathsep}${endorsed.dirs.ri}/jaxws-api.jar${pathsep}${jaxws.lib.ri}/jaxws-rt.jar${pathsep}${jaxws.lib.ri}/jaxws-tools.jar${pathsep}${jaxws.lib.ri}/jsr181-api.jar${pathsep}${jaxws.lib.ri}/mail.jar${pathsep}${jaxws.lib.ri}/management-api.jar${pathsep}${jaxws.lib.ri}/mimepull.jar${pathsep}${jaxws.lib.ri}/policy.jar${pathsep}${jaxws.lib.ri}/resolver.jar${pathsep}${jaxws.lib.ri}/saaj-impl.jar${pathsep}${jaxws.lib.ri}/stax-ex.jar${pathsep}${jaxws.lib.ri}/stax2-api.jar${pathsep}${jaxws.lib.ri}/streambuffer.jar${pathsep}${jaxws.lib.ri}/woodstox-core-asl.jar${pathsep}${jaxws.lib.ri}/webservices-api-osgi.jar
 
 ###########################################################################
 # @catalog.path  Path to catalog file for use with catalog tests
@@ -502,14 +502,4 @@ tslib.name=jaxwstck
 # of time the client will delay in seconds.
 ###########################################################################
 client.delay=1
-
-
-###############################################################
-# @extension.dir - The extension directory of RI. 
-# The CTS config.vi target will copy the CTS library 
-# jars to this location, used only for RI.
-###############################################################
-extension.dir=${webcontainer.home}/domains/domain1/lib/
-extension.dir.ri=${webcontainer.home.ri}/domains/domain1/lib
-
 
