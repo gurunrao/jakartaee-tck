@@ -16,9 +16,9 @@
 
 package com.sun.ts.tests.jaxrs.ee.rs.headerparam.sub;
 
-import com.sun.ts.tests.jaxrs.ee.rs.headerparam.HeaderParamTest;
-
 import jakarta.ws.rs.Path;
+
+import com.sun.ts.tests.jaxrs.ee.rs.headerparam.HeaderParamTest;
 
 @Path("resource")
 public class SubResource extends HeaderParamTest {

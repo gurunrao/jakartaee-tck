@@ -22,8 +22,6 @@ import java.io.OutputStream;
 import java.lang.annotation.Annotation;
 import java.lang.reflect.Type;
 
-import com.sun.ts.tests.jaxrs.common.impl.StringStreamingOutput;
-
 import jakarta.ws.rs.WebApplicationException;
 import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.MultivaluedMap;
@@ -31,6 +29,8 @@ import jakarta.ws.rs.core.StreamingOutput;
 import jakarta.ws.rs.ext.MessageBodyReader;
 import jakarta.ws.rs.ext.MessageBodyWriter;
 import jakarta.ws.rs.ext.Provider;
+
+import com.sun.ts.tests.jaxrs.common.impl.StringStreamingOutput;
 
 @Provider
 public class TckStreamingOutputProvider extends AbstractProvider implements

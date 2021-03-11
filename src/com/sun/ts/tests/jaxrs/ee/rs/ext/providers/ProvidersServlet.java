@@ -20,12 +20,6 @@ import java.io.IOException;
 import java.lang.annotation.Annotation;
 import java.lang.reflect.Method;
 
-import com.sun.ts.tests.jaxrs.ee.rs.core.application.ApplicationServlet;
-import com.sun.ts.tests.jaxrs.ee.rs.ext.contextresolver.EnumProvider;
-import com.sun.ts.tests.jaxrs.ee.rs.ext.exceptionmapper.AnyExceptionExceptionMapper;
-import com.sun.ts.tests.jaxrs.ee.rs.ext.messagebodyreaderwriter.EntityAnnotation;
-import com.sun.ts.tests.jaxrs.ee.rs.ext.messagebodyreaderwriter.ReadableWritableEntity;
-
 import jakarta.ws.rs.Consumes;
 import jakarta.ws.rs.GET;
 import jakarta.ws.rs.POST;
@@ -40,6 +34,12 @@ import jakarta.ws.rs.ext.ExceptionMapper;
 import jakarta.ws.rs.ext.MessageBodyReader;
 import jakarta.ws.rs.ext.MessageBodyWriter;
 import jakarta.ws.rs.ext.Providers;
+
+import com.sun.ts.tests.jaxrs.ee.rs.core.application.ApplicationServlet;
+import com.sun.ts.tests.jaxrs.ee.rs.ext.contextresolver.EnumProvider;
+import com.sun.ts.tests.jaxrs.ee.rs.ext.exceptionmapper.AnyExceptionExceptionMapper;
+import com.sun.ts.tests.jaxrs.ee.rs.ext.messagebodyreaderwriter.EntityAnnotation;
+import com.sun.ts.tests.jaxrs.ee.rs.ext.messagebodyreaderwriter.ReadableWritableEntity;
 
 @Path("ProvidersServlet")
 public class ProvidersServlet extends ApplicationServlet {
@@ -104,7 +104,7 @@ public class ProvidersServlet extends ApplicationServlet {
     ExceptionMapper<RuntimeException> em = providers
         .getExceptionMapper(RuntimeException.class);
     Status status = Status.NOT_ACCEPTABLE;
-    if (em != null && AnyExceptionExceptionMapper.class.isInstance(em))
+    if (em != null && em.getClass() == AnyExceptionExceptionMapper.class)
       status = Status.OK;
     // This serverError() is to get ResponseBuilder with status != OK
     return Response.serverError().status(status).build();

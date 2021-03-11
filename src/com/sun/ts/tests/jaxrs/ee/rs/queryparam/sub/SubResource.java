@@ -16,9 +16,9 @@
 
 package com.sun.ts.tests.jaxrs.ee.rs.queryparam.sub;
 
-import com.sun.ts.tests.jaxrs.ee.rs.queryparam.QueryParamTest;
-
 import jakarta.ws.rs.Path;
+
+import com.sun.ts.tests.jaxrs.ee.rs.queryparam.QueryParamTest;
 
 @Path("resource")
 public class SubResource extends QueryParamTest {

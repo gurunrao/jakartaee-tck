@@ -16,10 +16,6 @@
 
 package com.sun.ts.tests.jaxrs.ee.rs.beanparam.cookie.plain;
 
-import com.sun.ts.tests.jaxrs.ee.rs.Constants;
-import com.sun.ts.tests.jaxrs.ee.rs.ParamTest;
-import com.sun.ts.tests.jaxrs.ee.rs.beanparam.cookie.bean.CookieBeanParamEntity;
-
 import jakarta.ws.rs.BeanParam;
 import jakarta.ws.rs.Consumes;
 import jakarta.ws.rs.POST;
@@ -29,6 +25,10 @@ import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.NewCookie;
 import jakarta.ws.rs.core.Response;
 import jakarta.ws.rs.core.Response.ResponseBuilder;
+
+import com.sun.ts.tests.jaxrs.ee.rs.Constants;
+import com.sun.ts.tests.jaxrs.ee.rs.ParamTest;
+import com.sun.ts.tests.jaxrs.ee.rs.beanparam.cookie.bean.CookieBeanParamEntity;
 
 @Path(value = "resource")
 public class Resource extends ParamTest {

@@ -21,11 +21,6 @@ import java.io.InputStream;
 import java.io.Reader;
 import java.math.BigDecimal;
 
-import javax.xml.transform.Source;
-
-import com.sun.ts.tests.jaxrs.common.client.JaxrsCommonClient;
-import com.sun.ts.tests.jaxrs.common.util.JaxrsUtil;
-
 import jakarta.activation.DataSource;
 import jakarta.ws.rs.ProcessingException;
 import jakarta.ws.rs.core.GenericType;
@@ -36,6 +31,10 @@ import jakarta.ws.rs.core.NoContentException;
 import jakarta.ws.rs.core.Response;
 import jakarta.ws.rs.core.Response.Status;
 import jakarta.xml.bind.JAXBElement;
+import javax.xml.transform.Source;
+
+import com.sun.ts.tests.jaxrs.common.client.JaxrsCommonClient;
+import com.sun.ts.tests.jaxrs.common.util.JaxrsUtil;
 
 /*
  * @class.setup_props: webServerHost;

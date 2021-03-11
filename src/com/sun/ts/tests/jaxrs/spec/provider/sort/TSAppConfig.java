@@ -19,9 +19,9 @@ package com.sun.ts.tests.jaxrs.spec.provider.sort;
 import java.util.HashSet;
 import java.util.Set;
 
-import com.sun.ts.tests.jaxrs.common.provider.StringBeanEntityProvider;
-
 import jakarta.ws.rs.core.Application;
+
+import com.sun.ts.tests.jaxrs.common.provider.StringBeanEntityProvider;
 
 public class TSAppConfig extends Application {
 

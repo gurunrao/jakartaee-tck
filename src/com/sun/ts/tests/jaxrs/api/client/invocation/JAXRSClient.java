@@ -20,8 +20,6 @@ import java.io.IOException;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.Future;
 
-import com.sun.ts.tests.jaxrs.common.JAXRSCommonClient;
-
 import jakarta.ws.rs.ProcessingException;
 import jakarta.ws.rs.WebApplicationException;
 import jakarta.ws.rs.client.Client;
@@ -36,6 +34,8 @@ import jakarta.ws.rs.core.GenericType;
 import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
 import jakarta.ws.rs.core.Response.Status;
+
+import com.sun.ts.tests.jaxrs.common.JAXRSCommonClient;
 
 /*
  * @class.setup_props: webServerHost;

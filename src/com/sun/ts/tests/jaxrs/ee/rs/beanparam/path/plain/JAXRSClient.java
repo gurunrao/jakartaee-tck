@@ -16,9 +16,9 @@
 
 package com.sun.ts.tests.jaxrs.ee.rs.beanparam.path.plain;
 
-import com.sun.ts.tests.jaxrs.ee.rs.beanparam.BeanParamCommonClient;
-
 import jakarta.ws.rs.core.Response.Status;
+
+import com.sun.ts.tests.jaxrs.ee.rs.beanparam.BeanParamCommonClient;
 
 /*
  * @class.setup_props: webServerHost;

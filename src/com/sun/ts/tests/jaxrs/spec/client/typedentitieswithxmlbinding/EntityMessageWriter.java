@@ -22,7 +22,6 @@ import java.lang.annotation.Annotation;
 import java.lang.reflect.Type;
 
 import com.sun.ts.tests.jaxrs.ee.rs.ext.messagebodyreaderwriter.ReadableWritableEntity;
-
 import jakarta.ws.rs.WebApplicationException;
 import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.MultivaluedMap;

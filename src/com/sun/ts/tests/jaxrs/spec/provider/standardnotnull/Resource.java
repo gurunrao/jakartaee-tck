@@ -22,10 +22,6 @@ import java.io.Reader;
 import java.math.BigDecimal;
 import java.util.concurrent.atomic.AtomicInteger;
 
-import javax.xml.transform.Source;
-
-import com.sun.ts.tests.jaxrs.common.impl.StringStreamingOutput;
-
 import jakarta.activation.DataSource;
 import jakarta.ws.rs.GET;
 import jakarta.ws.rs.POST;
@@ -34,6 +30,9 @@ import jakarta.ws.rs.core.MultivaluedMap;
 import jakarta.ws.rs.core.Response;
 import jakarta.ws.rs.core.StreamingOutput;
 import jakarta.xml.bind.JAXBElement;
+import javax.xml.transform.Source;
+
+import com.sun.ts.tests.jaxrs.common.impl.StringStreamingOutput;
 
 @Path("resource")
 public class Resource {

@@ -20,12 +20,6 @@ import java.util.List;
 import java.util.Set;
 import java.util.SortedSet;
 
-import com.sun.ts.tests.jaxrs.ee.rs.ParamEntityThrowingExceptionGivenByName;
-import com.sun.ts.tests.jaxrs.ee.rs.ParamEntityThrowingWebApplicationException;
-import com.sun.ts.tests.jaxrs.ee.rs.ParamEntityWithConstructor;
-import com.sun.ts.tests.jaxrs.ee.rs.ParamEntityWithFromString;
-import com.sun.ts.tests.jaxrs.ee.rs.ParamEntityWithValueOf;
-
 import jakarta.ws.rs.DefaultValue;
 import jakarta.ws.rs.Encoded;
 import jakarta.ws.rs.GET;
@@ -35,6 +29,12 @@ import jakarta.ws.rs.Produces;
 import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.MultivaluedMap;
 import jakarta.ws.rs.core.PathSegment;
+
+import com.sun.ts.tests.jaxrs.ee.rs.ParamEntityThrowingExceptionGivenByName;
+import com.sun.ts.tests.jaxrs.ee.rs.ParamEntityThrowingWebApplicationException;
+import com.sun.ts.tests.jaxrs.ee.rs.ParamEntityWithConstructor;
+import com.sun.ts.tests.jaxrs.ee.rs.ParamEntityWithFromString;
+import com.sun.ts.tests.jaxrs.ee.rs.ParamEntityWithValueOf;
 
 @Path(value = "/PathParamTest")
 public class PathParamTest {

@@ -16,10 +16,9 @@
 
 package com.sun.ts.tests.jaxrs.ee.rs.core.request;
 
-import java.util.HashSet;
-import java.util.Set;
-
 import jakarta.ws.rs.core.Application;
+import java.util.Set;
+import java.util.HashSet;
 
 public class TSAppConfig extends Application {
 

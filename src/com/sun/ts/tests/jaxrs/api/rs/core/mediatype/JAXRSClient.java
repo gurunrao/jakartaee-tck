@@ -19,9 +19,9 @@ package com.sun.ts.tests.jaxrs.api.rs.core.mediatype;
 import java.util.HashMap;
 import java.util.Map;
 
-import com.sun.ts.tests.jaxrs.common.JAXRSCommonClient;
-
 import jakarta.ws.rs.core.MediaType;
+
+import com.sun.ts.tests.jaxrs.common.JAXRSCommonClient;
 
 public class JAXRSClient extends JAXRSCommonClient {
 

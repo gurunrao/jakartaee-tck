@@ -19,9 +19,9 @@
  */
 package com.sun.ts.tests.jaxrs.ee.rs.headerparam;
 
-import com.sun.ts.tests.jaxrs.ee.rs.JaxrsParamClient;
-
 import jakarta.ws.rs.core.Response.Status;
+
+import com.sun.ts.tests.jaxrs.ee.rs.JaxrsParamClient;
 
 /*
  * @class.setup_props: webServerHost;

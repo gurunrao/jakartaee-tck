@@ -17,7 +17,6 @@
 package com.sun.ts.tests.jaxrs.ee.rs.core.uriinfo;
 
 import java.net.URI;
-
 import jakarta.ws.rs.GET;
 import jakarta.ws.rs.Path;
 import jakarta.ws.rs.core.Context;

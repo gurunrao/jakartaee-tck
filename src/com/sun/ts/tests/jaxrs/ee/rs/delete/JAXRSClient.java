@@ -19,9 +19,9 @@
  */
 package com.sun.ts.tests.jaxrs.ee.rs.delete;
 
-import com.sun.ts.tests.jaxrs.common.JAXRSCommonClient;
-
 import jakarta.ws.rs.core.Response.Status;
+
+import com.sun.ts.tests.jaxrs.common.JAXRSCommonClient;
 
 public class JAXRSClient extends JAXRSCommonClient {
 

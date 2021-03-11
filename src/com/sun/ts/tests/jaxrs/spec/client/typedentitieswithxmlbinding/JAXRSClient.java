@@ -16,10 +16,8 @@
 
 package com.sun.ts.tests.jaxrs.spec.client.typedentitieswithxmlbinding;
 
-import javax.xml.namespace.QName;
-
 import com.sun.ts.tests.jaxrs.common.client.JaxrsCommonClient;
-
+import javax.xml.namespace.QName;
 import jakarta.ws.rs.core.GenericType;
 import jakarta.ws.rs.core.MediaType;
 import jakarta.xml.bind.JAXBElement;

@@ -20,6 +20,8 @@ import jakarta.ws.rs.Consumes;
 import jakarta.ws.rs.Produces;
 import jakarta.ws.rs.core.MediaType;
 
+import com.sun.ts.tests.jaxrs.common.provider.StringBean;
+
 @Consumes(MediaType.TEXT_PLAIN)
 @Produces(MediaType.TEXT_PLAIN)
 /**

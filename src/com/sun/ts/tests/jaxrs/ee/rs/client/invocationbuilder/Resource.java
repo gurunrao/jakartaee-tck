@@ -19,8 +19,6 @@ package com.sun.ts.tests.jaxrs.ee.rs.client.invocationbuilder;
 import java.util.List;
 import java.util.Map.Entry;
 
-import com.sun.ts.tests.jaxrs.common.util.JaxrsUtil;
-
 import jakarta.ws.rs.CookieParam;
 import jakarta.ws.rs.DELETE;
 import jakarta.ws.rs.GET;
@@ -32,6 +30,8 @@ import jakarta.ws.rs.Path;
 import jakarta.ws.rs.core.Context;
 import jakarta.ws.rs.core.HttpHeaders;
 import jakarta.ws.rs.core.MultivaluedMap;
+
+import com.sun.ts.tests.jaxrs.common.util.JaxrsUtil;
 
 @Path("resource")
 public class Resource {
