@@ -20,7 +20,6 @@
 package com.sun.ts.tests.servlet.api.jakarta_servlet_http.readlistener;
 
 import java.io.IOException;
-
 import jakarta.servlet.AsyncContext;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.ServletInputStream;

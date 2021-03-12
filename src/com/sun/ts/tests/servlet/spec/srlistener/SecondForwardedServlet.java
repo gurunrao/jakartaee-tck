@@ -19,17 +19,15 @@
  */
 package com.sun.ts.tests.servlet.spec.srlistener;
 
-import java.io.IOException;
-import java.io.PrintWriter;
-import java.lang.reflect.InvocationTargetException;
-import java.lang.reflect.Method;
-
 import com.sun.ts.tests.servlet.common.util.ServletTestUtil;
-
 import jakarta.servlet.GenericServlet;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.ServletRequest;
 import jakarta.servlet.ServletResponse;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
 
 public class SecondForwardedServlet extends GenericServlet {
 

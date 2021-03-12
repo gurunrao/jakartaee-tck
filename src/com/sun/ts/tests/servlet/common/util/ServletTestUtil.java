@@ -22,13 +22,7 @@ package com.sun.ts.tests.servlet.common.util;
 
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Enumeration;
-import java.util.List;
-import java.util.NoSuchElementException;
-import java.util.StringTokenizer;
-
+import java.util.*;
 import jakarta.servlet.ServletOutputStream;
 import jakarta.servlet.http.Cookie;
 

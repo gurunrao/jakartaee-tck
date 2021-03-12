@@ -21,7 +21,6 @@
 package com.sun.ts.tests.servlet.api.jakarta_servlet.servletresponse;
 
 import java.io.PrintWriter;
-
 import com.sun.javatest.Status;
 import com.sun.ts.tests.servlet.api.common.response.ResponseClient;
 

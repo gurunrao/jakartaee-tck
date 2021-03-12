@@ -20,7 +20,6 @@
 package com.sun.ts.tests.servlet.pluggability.api.jakarta_servlet.servlet;
 
 import java.io.PrintWriter;
-
 import com.sun.javatest.Status;
 import com.sun.ts.tests.servlet.common.client.AbstractUrlClient;
 

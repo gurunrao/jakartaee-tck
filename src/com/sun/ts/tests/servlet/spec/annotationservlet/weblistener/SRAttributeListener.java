@@ -17,7 +17,6 @@
 package com.sun.ts.tests.servlet.spec.annotationservlet.weblistener;
 
 import java.util.ArrayList;
-
 import jakarta.servlet.ServletRequestAttributeEvent;
 import jakarta.servlet.ServletRequestAttributeListener;
 import jakarta.servlet.annotation.WebListener;

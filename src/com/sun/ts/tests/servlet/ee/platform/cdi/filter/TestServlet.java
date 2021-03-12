@@ -17,7 +17,6 @@
 package com.sun.ts.tests.servlet.ee.platform.cdi.filter;
 
 import java.io.IOException;
-
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;

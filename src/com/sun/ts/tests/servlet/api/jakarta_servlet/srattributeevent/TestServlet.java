@@ -58,10 +58,6 @@
 
 package com.sun.ts.tests.servlet.api.jakarta_servlet.srattributeevent;
 
-import java.io.IOException;
-import java.io.PrintWriter;
-import java.util.ArrayList;
-
 import com.sun.ts.tests.servlet.common.servlets.GenericTCKServlet;
 import com.sun.ts.tests.servlet.common.util.ServletTestUtil;
 import com.sun.ts.tests.servlet.common.util.StaticLog;
@@ -70,6 +66,9 @@ import jakarta.servlet.ServletException;
 import jakarta.servlet.ServletRequest;
 import jakarta.servlet.ServletRequestAttributeEvent;
 import jakarta.servlet.ServletResponse;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.ArrayList;
 
 public class TestServlet extends GenericTCKServlet {
 

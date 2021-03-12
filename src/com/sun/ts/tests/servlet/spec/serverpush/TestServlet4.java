@@ -16,9 +16,6 @@
 
 package com.sun.ts.tests.servlet.spec.serverpush;
 
-import java.io.IOException;
-import java.io.PrintWriter;
-
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.Cookie;
 import jakarta.servlet.http.HttpServlet;
@@ -26,6 +23,8 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
 import jakarta.servlet.http.PushBuilder;
+import java.io.IOException;
+import java.io.PrintWriter;
 
 public class TestServlet4 extends HttpServlet {
 

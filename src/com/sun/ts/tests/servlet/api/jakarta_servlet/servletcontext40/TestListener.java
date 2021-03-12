@@ -21,10 +21,9 @@ package com.sun.ts.tests.servlet.api.jakarta_servlet.servletcontext40;
 
 import java.util.ArrayList;
 import java.util.List;
-
 import jakarta.servlet.ServletContext;
-import jakarta.servlet.ServletContextEvent;
 import jakarta.servlet.ServletContextListener;
+import jakarta.servlet.ServletContextEvent;
 import jakarta.servlet.ServletRegistration;
 
 public class TestListener implements ServletContextListener {

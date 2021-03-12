@@ -17,10 +17,9 @@
 package com.sun.ts.tests.servlet.spec.annotationservlet.weblistener;
 
 import java.util.ArrayList;
-
-import jakarta.servlet.annotation.WebListener;
-import jakarta.servlet.http.HttpSessionAttributeListener;
 import jakarta.servlet.http.HttpSessionBindingEvent;
+import jakarta.servlet.http.HttpSessionAttributeListener;
+import jakarta.servlet.annotation.WebListener;
 
 @WebListener(value = "HttpSessionAttributeListener")
 public final class HSAttributeListener implements HttpSessionAttributeListener {

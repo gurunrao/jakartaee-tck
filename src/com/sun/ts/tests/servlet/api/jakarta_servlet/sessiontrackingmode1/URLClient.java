@@ -19,10 +19,9 @@
  */
 package com.sun.ts.tests.servlet.api.jakarta_servlet.sessiontrackingmode1;
 
-import java.io.PrintWriter;
-
 import com.sun.javatest.Status;
 import com.sun.ts.tests.servlet.common.client.AbstractUrlClient;
+import java.io.PrintWriter;
 
 public class URLClient extends AbstractUrlClient {
 

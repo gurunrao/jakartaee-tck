@@ -58,8 +58,6 @@
 
 package com.sun.ts.tests.servlet.api.jakarta_servlet_http.httpservletresponsewrapper;
 
-import java.io.IOException;
-
 import com.sun.ts.tests.servlet.api.common.response.HttpResponseTestServlet;
 
 import jakarta.servlet.ServletConfig;
@@ -67,6 +65,7 @@ import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpServletResponseWrapper;
+import java.io.IOException;
 
 public class TestServlet extends HttpResponseTestServlet {
 

@@ -19,16 +19,9 @@
  */
 package com.sun.ts.tests.servlet.api.jakarta_servlet.servletrequest30;
 
-import java.io.IOException;
-
 import com.sun.ts.tests.servlet.common.servlets.GenericTCKServlet;
-
-import jakarta.servlet.AsyncContext;
-import jakarta.servlet.RequestDispatcher;
-import jakarta.servlet.ServletContext;
-import jakarta.servlet.ServletException;
-import jakarta.servlet.ServletRequest;
-import jakarta.servlet.ServletResponse;
+import java.io.IOException;
+import jakarta.servlet.*;
 
 public class TestServlet extends GenericTCKServlet {
 

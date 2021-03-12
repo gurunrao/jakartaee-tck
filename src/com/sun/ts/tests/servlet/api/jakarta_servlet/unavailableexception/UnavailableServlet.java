@@ -20,14 +20,13 @@
 
 package com.sun.ts.tests.servlet.api.jakarta_servlet.unavailableexception;
 
-import java.io.IOException;
-import java.io.PrintWriter;
-
 import jakarta.servlet.GenericServlet;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.ServletRequest;
 import jakarta.servlet.ServletResponse;
 import jakarta.servlet.UnavailableException;
+import java.io.IOException;
+import java.io.PrintWriter;
 
 public class UnavailableServlet extends GenericServlet {
 

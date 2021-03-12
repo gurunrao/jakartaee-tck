@@ -20,8 +20,6 @@
 
 package com.sun.ts.tests.servlet.api.jakarta_servlet.servletoutputstream;
 
-import java.io.IOException;
-
 import com.sun.ts.tests.servlet.common.servlets.GenericTCKServlet;
 import com.sun.ts.tests.servlet.common.util.ServletTestUtil;
 
@@ -29,6 +27,7 @@ import jakarta.servlet.ServletException;
 import jakarta.servlet.ServletOutputStream;
 import jakarta.servlet.ServletRequest;
 import jakarta.servlet.ServletResponse;
+import java.io.IOException;
 
 public class TestServlet extends GenericTCKServlet {
 

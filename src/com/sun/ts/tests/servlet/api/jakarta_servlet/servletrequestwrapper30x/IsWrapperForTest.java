@@ -17,7 +17,6 @@
 package com.sun.ts.tests.servlet.api.jakarta_servlet.servletrequestwrapper30x;
 
 import java.io.IOException;
-
 import jakarta.servlet.GenericServlet;
 import jakarta.servlet.ServletConfig;
 import jakarta.servlet.ServletException;

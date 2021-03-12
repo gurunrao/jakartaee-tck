@@ -16,18 +16,17 @@
 
 package com.sun.ts.tests.servlet.api.jakarta_servlet_http.httpsessionx;
 
-import java.io.IOException;
-import java.io.PrintWriter;
-
 import com.sun.ts.tests.servlet.common.servlets.HttpTCKServlet;
 import com.sun.ts.tests.servlet.common.util.ServletTestUtil;
 
-import jakarta.servlet.RequestDispatcher;
-import jakarta.servlet.ServletContext;
 import jakarta.servlet.ServletException;
+import jakarta.servlet.ServletContext;
+import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
+import java.io.IOException;
+import java.io.PrintWriter;
 
 public class TestServlet extends HttpTCKServlet {
   int expectedResult = 10;

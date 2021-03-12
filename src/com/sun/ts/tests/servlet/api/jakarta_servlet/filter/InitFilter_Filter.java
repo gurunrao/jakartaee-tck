@@ -60,11 +60,6 @@
 
 package com.sun.ts.tests.servlet.api.jakarta_servlet.filter;
 
-import java.io.IOException;
-import java.io.PrintWriter;
-import java.util.Enumeration;
-import java.util.Vector;
-
 import com.sun.ts.tests.servlet.common.util.ServletTestUtil;
 
 import jakarta.servlet.Filter;
@@ -73,6 +68,10 @@ import jakarta.servlet.FilterConfig;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.ServletRequest;
 import jakarta.servlet.ServletResponse;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.Enumeration;
+import java.util.Vector;
 
 public final class InitFilter_Filter implements Filter {
 

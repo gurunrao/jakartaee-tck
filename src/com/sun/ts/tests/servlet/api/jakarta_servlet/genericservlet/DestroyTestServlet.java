@@ -58,12 +58,11 @@
 
 package com.sun.ts.tests.servlet.api.jakarta_servlet.genericservlet;
 
-import java.io.IOException;
-
 import jakarta.servlet.GenericServlet;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.ServletRequest;
 import jakarta.servlet.ServletResponse;
+import java.io.IOException;
 
 public class DestroyTestServlet extends GenericServlet {
 

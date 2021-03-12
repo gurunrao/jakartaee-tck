@@ -19,10 +19,8 @@
  */
 package com.sun.ts.tests.servlet.spec.annotationservlet.weblistener;
 
-import java.io.IOException;
-
 import com.sun.ts.tests.servlet.common.servlets.GenericTCKServlet;
-
+import java.io.IOException;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.ServletRequest;
 import jakarta.servlet.ServletResponse;

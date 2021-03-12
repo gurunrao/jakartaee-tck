@@ -22,7 +22,6 @@ package com.sun.ts.tests.servlet.api.jakarta_servlet.servletrequest30;
 import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
-
 import jakarta.servlet.GenericServlet;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.ServletRequest;

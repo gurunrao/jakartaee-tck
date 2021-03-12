@@ -16,10 +16,9 @@
 
 package com.sun.ts.tests.servlet.spec.annotationservlet.weblistener;
 
-import java.util.ArrayList;
-
 import jakarta.servlet.ServletRequestEvent;
 import jakarta.servlet.ServletRequestListener;
+import java.util.ArrayList;
 import jakarta.servlet.annotation.WebListener;
 
 @WebListener(value = "ServletRequestListener")

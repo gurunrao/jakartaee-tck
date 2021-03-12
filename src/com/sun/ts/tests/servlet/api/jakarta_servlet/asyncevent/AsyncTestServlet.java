@@ -16,14 +16,12 @@
 
 package com.sun.ts.tests.servlet.api.jakarta_servlet.asyncevent;
 
-import java.io.IOException;
-
 import com.sun.ts.tests.servlet.common.servlets.GenericTCKServlet;
-
-import jakarta.servlet.AsyncContext;
-import jakarta.servlet.AsyncEvent;
+import java.io.IOException;
 import jakarta.servlet.ServletRequest;
 import jakarta.servlet.ServletResponse;
+import jakarta.servlet.AsyncContext;
+import jakarta.servlet.AsyncEvent;
 
 public class AsyncTestServlet extends GenericTCKServlet {
 

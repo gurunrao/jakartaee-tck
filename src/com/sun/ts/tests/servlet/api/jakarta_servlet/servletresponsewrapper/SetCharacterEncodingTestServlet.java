@@ -58,8 +58,6 @@
 
 package com.sun.ts.tests.servlet.api.jakarta_servlet.servletresponsewrapper;
 
-import java.io.IOException;
-
 import com.sun.ts.tests.servlet.api.common.response.ResponseTests;
 
 import jakarta.servlet.GenericServlet;
@@ -67,6 +65,7 @@ import jakarta.servlet.ServletException;
 import jakarta.servlet.ServletRequest;
 import jakarta.servlet.ServletResponse;
 import jakarta.servlet.ServletResponseWrapper;
+import java.io.IOException;
 
 public class SetCharacterEncodingTestServlet extends GenericServlet {
 

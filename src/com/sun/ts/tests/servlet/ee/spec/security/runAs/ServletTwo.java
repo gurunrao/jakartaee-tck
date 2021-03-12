@@ -20,15 +20,14 @@
 
 package com.sun.ts.tests.servlet.ee.spec.security.runAs;
 
-import java.io.IOException;
-import java.io.PrintWriter;
-
-import jakarta.annotation.security.RunAs;
-import jakarta.ejb.EJB;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import jakarta.annotation.security.RunAs;
+import jakarta.ejb.EJB;
+import java.io.IOException;
+import java.io.PrintWriter;
 
 @RunAs("Manager")
 public class ServletTwo extends HttpServlet {

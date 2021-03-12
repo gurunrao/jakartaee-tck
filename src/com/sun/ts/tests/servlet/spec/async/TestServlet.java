@@ -19,16 +19,14 @@
  */
 package com.sun.ts.tests.servlet.spec.async;
 
-import java.io.IOException;
-import java.util.Timer;
-import java.util.TimerTask;
-
 import com.sun.ts.tests.servlet.common.servlets.GenericTCKServlet;
-
-import jakarta.servlet.AsyncContext;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.ServletRequest;
 import jakarta.servlet.ServletResponse;
+import java.io.IOException;
+import java.util.Timer;
+import java.util.TimerTask;
+import jakarta.servlet.AsyncContext;
 
 public class TestServlet extends GenericTCKServlet {
 

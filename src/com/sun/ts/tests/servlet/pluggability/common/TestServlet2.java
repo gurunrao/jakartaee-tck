@@ -20,14 +20,13 @@
 
 package com.sun.ts.tests.servlet.pluggability.common;
 
-import java.io.IOException;
-import java.io.PrintWriter;
-import java.util.ArrayList;
-
 import jakarta.servlet.GenericServlet;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.ServletRequest;
 import jakarta.servlet.ServletResponse;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.ArrayList;
 
 public class TestServlet2 extends GenericServlet {
 

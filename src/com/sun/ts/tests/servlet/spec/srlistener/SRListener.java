@@ -19,10 +19,9 @@
  */
 package com.sun.ts.tests.servlet.spec.srlistener;
 
-import java.util.ArrayList;
-
 import jakarta.servlet.ServletRequestEvent;
 import jakarta.servlet.ServletRequestListener;
+import java.util.ArrayList;
 
 public final class SRListener implements ServletRequestListener {
 

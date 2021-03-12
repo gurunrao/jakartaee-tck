@@ -21,12 +21,14 @@
 package com.sun.ts.tests.servlet.spec.errorpage1;
 
 import com.sun.ts.tests.servlet.common.servlets.HttpTCKServlet;
-import com.sun.ts.tests.servlet.spec.errorpage.TestException;
+
+import com.sun.ts.tests.servlet.spec.errorpage.*;
 
 import jakarta.servlet.ServletConfig;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import java.io.IOException;
 
 public class TestServlet extends HttpTCKServlet {
 

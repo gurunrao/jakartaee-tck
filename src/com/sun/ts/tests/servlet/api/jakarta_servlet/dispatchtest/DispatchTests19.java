@@ -22,12 +22,7 @@ package com.sun.ts.tests.servlet.api.jakarta_servlet.dispatchtest;
 import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
-
-import jakarta.servlet.AsyncContext;
-import jakarta.servlet.GenericServlet;
-import jakarta.servlet.ServletException;
-import jakarta.servlet.ServletRequest;
-import jakarta.servlet.ServletResponse;
+import jakarta.servlet.*;
 
 public class DispatchTests19 extends GenericServlet {
 

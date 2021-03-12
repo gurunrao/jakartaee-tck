@@ -17,13 +17,7 @@
 package com.sun.ts.tests.servlet.api.jakarta_servlet.servletrequestwrapper30;
 
 import java.io.IOException;
-
-import jakarta.servlet.ServletConfig;
-import jakarta.servlet.ServletContext;
-import jakarta.servlet.ServletException;
-import jakarta.servlet.ServletRequest;
-import jakarta.servlet.ServletRequestWrapper;
-import jakarta.servlet.ServletResponse;
+import jakarta.servlet.*;
 
 public class TestServletWrapper extends
     com.sun.ts.tests.servlet.api.jakarta_servlet.servletrequest30.TestServlet {

@@ -19,11 +19,9 @@
  */
 package com.sun.ts.tests.servlet.api.jakarta_servlet.servletcontext301;
 
-import java.util.EventListener;
-
 import com.sun.ts.tests.servlet.common.util.StaticLog;
-
 import jakarta.servlet.ServletRequestEvent;
+import java.util.EventListener;
 
 public final class AddGenericEventListenerClass implements EventListener {
 

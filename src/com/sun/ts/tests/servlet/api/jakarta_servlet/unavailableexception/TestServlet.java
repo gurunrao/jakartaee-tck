@@ -20,9 +20,6 @@
 
 package com.sun.ts.tests.servlet.api.jakarta_servlet.unavailableexception;
 
-import java.io.IOException;
-import java.io.PrintWriter;
-
 import com.sun.ts.tests.servlet.common.servlets.GenericTCKServlet;
 import com.sun.ts.tests.servlet.common.util.ServletTestUtil;
 
@@ -30,6 +27,8 @@ import jakarta.servlet.ServletException;
 import jakarta.servlet.ServletRequest;
 import jakarta.servlet.ServletResponse;
 import jakarta.servlet.UnavailableException;
+import java.io.IOException;
+import java.io.PrintWriter;
 
 public class TestServlet extends GenericTCKServlet {
 

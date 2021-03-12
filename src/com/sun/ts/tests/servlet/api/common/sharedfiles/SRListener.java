@@ -20,7 +20,6 @@
 package com.sun.ts.tests.servlet.api.common.sharedfiles;
 
 import com.sun.ts.tests.servlet.common.util.StaticLog;
-
 import jakarta.servlet.ServletRequestEvent;
 import jakarta.servlet.ServletRequestListener;
 
